@@ -14,7 +14,7 @@ router.get('/notes', (req, res) => {
 // give each new note a unqiue id
 router.post('/notes', (req, res) => {
   // set id based on what the next index of the array will be
-  req.body.id = notes.length.toString();
+  // req.body.id = notes.length.toString();
 
   notes.push(req.body);
   var newNotes = notes;
