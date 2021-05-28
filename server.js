@@ -1,4 +1,5 @@
 const express = require('express');
+const { db } = require('./Develop/db/db.json');
 
 const PORT = process.env.PORT || 3001;
 // initiate the server
@@ -13,8 +14,8 @@ const htmlRoutes = require('./routes/htmlRoutes/index');
 // // middleware for front-end resources
 // app.use(express.static('public'));
 
-// app.use('/api', apiRoutes);
-// app.use('/', htmlRoutes);
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
 
 // makes the server listen
