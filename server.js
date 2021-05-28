@@ -1,5 +1,4 @@
 const express = require('express');
-const { db } = require('./Develop/db/db.json');
 
 const PORT = process.env.PORT || 3001;
 // initiate the server

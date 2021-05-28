@@ -1,7 +1,6 @@
 const path = require('path');
 const router = require('express').Router();
 
-const { db } = require('./Develop/db/db.json');
-
+// const { db } = require('db.json');
 
 module.exports = router;
