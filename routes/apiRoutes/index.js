@@ -1,7 +1,7 @@
 const path = require('path');
 const router = require('express').Router();
 const notes = require('../../db/db.json');
-// require fs
+const fs = require('fs');
 
 
 // should read the db.json file and return all saved notes as JSON
@@ -17,6 +17,7 @@ router.post('/notes', (req, res) => {
   var newNotes = notes;
 
   // use fs.writeFile in order to write to the db json its new data
+  
 
   res.json(newNotes);
  

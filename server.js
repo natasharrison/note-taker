@@ -6,15 +6,15 @@ const app = express();
 const apiRoutes = require('./routes/apiRoutes/index');
 const htmlRoutes = require('./routes/htmlRoutes/index');
 
-// // parse incoming string or array data
-// app.use(express.urlencoded({ extended: true }));
-// // parse incoming JSON data
-// app.use(express.json());
-// // middleware for front-end resources
-// app.use(express.static('public'));
+// parse incoming string or array data
+app.use(express.urlencoded({ extended: true }));
+// parse incoming JSON data
+app.use(express.json());
+// middleware for front-end resources
+app.use(express.static('public'));
 
-// app.use('/api', apiRoutes);
-// app.use('/', htmlRoutes);
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
 
 // makes the server listen
