@@ -11,14 +11,19 @@ router.get('/notes', (req, res) => {
 
 // should receive a new note to save on the request body and add it to the db.json file
 // should return the new note to the client 
+// give each new note a unqiue id
 router.post('/notes', (req, res) => {
+  // set id based on what the next index of the array will be
+  req.body.id = notes.length.toString();
 
   notes.push(req.body);
   var newNotes = notes;
 
-  // use fs.writeFile in order to write to the db json its new data
+  fs.writeFileSync(
+    path.join(__dirname, '../../db/db.json'), 
+    JSON.stringify({ notes}, null, 2)
+  );
   
-
   res.json(newNotes);
  
 });
