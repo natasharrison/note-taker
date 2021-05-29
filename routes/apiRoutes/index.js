@@ -32,7 +32,7 @@ router.post('/notes', (req, res) => {
 
 // delete request should receive a query parameter containing the id of the note to delete
 // in order to delete a note, you should read all notes from the db.json file
-// remove the note with teh given id and rewrite the notes to the db.json file
+// remove the note with the given id and rewrite the notes to the db.json file
 router.delete('/api/notes/:id', (req, res) => {
 
 });
