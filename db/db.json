@@ -1,9 +1,24 @@
 {
    "notes": [
       {
-         "title": "Test Title",
+         "title": "Title",
          "text": "Test text",
          "id": "unique id"
+      },
+      {
+         "title": "Grocery",
+         "text": "Coffee, Cat Litter, Tuna, Meatballs, Salmon, Green Beans, 2 Lemons",
+         "id": "0251388d-de72-4f39-ad1d-d5661f43b8e2"
+      },
+      {
+         "title": "Homework",
+         "text": "Challenge 12 and Module 13 ",
+         "id": "7ff7a6ef-b564-462a-90d1-f4c13a3c0698"
+      },
+      {
+         "title": "Potential Cat Names",
+         "text": "Miso, Big Tuna, Mew, Ham",
+         "id": "562ac1a0-63e3-4406-baa3-87159b73e876"
       }
    ]
 }
