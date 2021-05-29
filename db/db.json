@@ -2,15 +2,13 @@
   "notes": [
     {
       "title": "Test Title",
-      "text": "Test text"
+      "text": "Test text",
+      "id": "unique id"
     },
     {
-      "title": "adf",
-      "text": "adg"
-    },
-    {
-      "title": "ahah",
-      "text": "adg"
+      "title": "asdgasg",
+      "text": "asdgasdg",
+      "id": "536e3932-dc33-4828-877c-a75debf2505c"
     }
   ]
 }

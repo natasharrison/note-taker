@@ -1,27 +1,31 @@
 const path = require('path');
 const router = require('express').Router();
-const notes = require('../../db/db.json');
+const data = require('../../db/db.json');
 const fs = require('fs');
-
+const { v4: uuidv4 }= require('uuid');
 
 // should read the db.json file and return all saved notes as JSON
 router.get('/notes', (req, res) => {
-    res.json(notes);
+    fs.readFile('../../db/db.json', function(err, data){
+      console.log(data);
+    });
+    // store in a variable .then 
+    res.json(data);
 });
 
 // should receive a new note to save on the request body and add it to the db.json file
 // should return the new note to the client 
-// give each new note a unqiue id
 router.post('/notes', (req, res) => {
-  // set id based on what the next index of the array will be
-  // req.body.id = notes.length.toString();
+  console.log(data);
+  req.body.id = uuidv4();
 
-  notes.push(req.body);
-  var newNotes = notes;
+  var newNotes = data;
+  console.log(newNotes);
+  newNotes.notes.push(req.body);
 
   fs.writeFileSync(
     path.join(__dirname, '../../db/db.json'), 
-    JSON.stringify({ notes}, null, 2)
+    JSON.stringify(newNotes, null, 2)
   );
   
   res.json(newNotes);
